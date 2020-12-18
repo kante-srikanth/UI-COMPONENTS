@@ -1,0 +1,95 @@
+html{
+    background: #333;
+}
+
+.gift{
+    width: 410px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+}
+
+.lid,.box{
+    background: radial-gradient(white 15%, red 15.1%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.lid{
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 70px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0 2px;
+    transition: top ease-out 0.5s, left ease-out 0.5s, transform ease-out 0.5s;
+}
+.box{
+    width: 400px;
+    height: 250px;
+}
+
+.box span, .lid span{
+    position: absolute;
+    background-color: rgba(235, 199,0,0.8);
+}
+
+.box span:first-child{
+    height: 60px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box span:last-child{
+    height: 100%;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lid span{
+    height: 100%;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.promo{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 10px;
+    color: wheat;
+    height: 0;
+    transition: all ease-out 0.7s;
+}
+
+.promo p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.promo h2{
+    font-size: 2rem;
+    margin: 0;
+}
+
+/** Hover styles **/
+
+.gift:hover .lid{
+    top: -110px;
+    transform: rotateZ(10deg);
+    left: 10px;
+}
+
+.gift:hover .promo{
+    top: -80px;
+}
+
+.gift:hover{
+    cursor: pointer;
+}
