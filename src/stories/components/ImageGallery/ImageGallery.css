@@ -1,0 +1,37 @@
+html{
+    overflow: hidden;
+}
+
+.panels{
+    display: flex;
+    height: 100vh;
+}
+
+.panel{
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.panel * {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    transition: all ease-out 0.8s;
+}
+
+.panel >*:first-child{
+    transform: translateY(-100%);
+}
+.panel>*:last-child {
+    transform: translateY(100%);
+}
+.panel.open-active>*:first-child,
+.panel.open-active>*:last-child {
+    transform: translateY(0);
+}
+
+.panel.open-active{
+    flex-basis: 300%;
+}
